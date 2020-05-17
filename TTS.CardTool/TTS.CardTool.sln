@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Utils", "..\CS.Utils\CS.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF.Utils", "..\CS.Utils\WPF.Utils\WPF.Utils.csproj", "{9B716678-C9F7-484B-8007-BA29467041B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Process", "TTS.CardTool.Process\TTS.CardTool.Process.csproj", "{CF83C62A-EFDB-4CE2-A365-6416E1000C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Model", "TTS.CardTool.Model\TTS.CardTool.Model.csproj", "{4F6BDF0A-F6E5-4515-8236-28504D7EF392}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{9B716678-C9F7-484B-8007-BA29467041B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B716678-C9F7-484B-8007-BA29467041B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B716678-C9F7-484B-8007-BA29467041B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF83C62A-EFDB-4CE2-A365-6416E1000C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF83C62A-EFDB-4CE2-A365-6416E1000C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF83C62A-EFDB-4CE2-A365-6416E1000C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF83C62A-EFDB-4CE2-A365-6416E1000C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F6BDF0A-F6E5-4515-8236-28504D7EF392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F6BDF0A-F6E5-4515-8236-28504D7EF392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F6BDF0A-F6E5-4515-8236-28504D7EF392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6BDF0A-F6E5-4515-8236-28504D7EF392}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

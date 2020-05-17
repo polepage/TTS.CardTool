@@ -9,6 +9,7 @@ using TTS.CardTool.UI.ViewModel;
 
 namespace TTS.CardTool.UI
 {
+    [ModuleDependency("TTS.CardTool.Process.Module")]
     public class Module : IModule
     {
         public static void ConfigureViewModelLocator(Func<Type, object> resolver)

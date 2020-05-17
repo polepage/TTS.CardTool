@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using TTS.CardTool.Process;
 using TTS.CardTool.UI.Events;
 using WPF.Utils.Dialogs;
 
@@ -15,13 +16,13 @@ namespace TTS.CardTool.UI.ViewModel
     {
         private readonly IEventAggregator _eventAggregator;
         private readonly IDialogService _dialogService;
-        //private readonly IImageCreator _process;
+        private readonly ICreationProcess _process;
 
-        public DeckViewViewModel(IEventAggregator eventAggregator, IDialogService dialogService/*, IImageCreator process*/)
+        public DeckViewViewModel(IEventAggregator eventAggregator, IDialogService dialogService, ICreationProcess process)
         {
             _eventAggregator = eventAggregator;
             _dialogService = dialogService;
-            //_process = process;
+            _process = process;
         }
 
         private DelegateCommand _openListCommand;
@@ -77,7 +78,7 @@ namespace TTS.CardTool.UI.ViewModel
 
             _eventAggregator.GetEvent<ShowWaiter>().Publish();
             _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate());
-            //await _process.CreateImage(Text, progress, stepProgress);
+            await _process.Create(Text, progress, stepProgress);
             _eventAggregator.GetEvent<HideWaiter>().Publish();
         }
     }
