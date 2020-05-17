@@ -9,6 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TTS.CardTool.Model.L5R\TTS.CardTool.Model.L5R.csproj" />
+    <ProjectReference Include="..\TTS.CardTool.Model\TTS.CardTool.Model.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Parser\TTS.CardTool.Parser.csproj" />
   </ItemGroup>
 

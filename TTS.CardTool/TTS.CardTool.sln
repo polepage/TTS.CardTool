@@ -17,6 +17,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Process", "TTS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Model", "TTS.CardTool.Model\TTS.CardTool.Model.csproj", "{4F6BDF0A-F6E5-4515-8236-28504D7EF392}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Parser", "TTS.CardTool.Parser\TTS.CardTool.Parser.csproj", "{2D2D2DAA-B6CA-4CF7-9734-AF2729562C51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Parser.MTG", "TTS.CardTool.Parser.MTG\TTS.CardTool.Parser.MTG.csproj", "{A4E1463F-DA90-407E-B78E-72C7FBFF6E10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Model.MTG", "TTS.CardTool.Model.MTG\TTS.CardTool.Model.MTG.csproj", "{9D7D10E0-28E4-4991-8BF8-04B6EBA5B9F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Model.L5R", "TTS.CardTool.Model.L5R\TTS.CardTool.Model.L5R.csproj", "{0933CBD2-CD12-4CFA-A3BC-35EA0CAA99BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Parser.L5R", "TTS.CardTool.Parser.L5R\TTS.CardTool.Parser.L5R.csproj", "{A1DA1584-E185-425F-B57A-1FE410F2DAF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +61,26 @@ Global
 		{4F6BDF0A-F6E5-4515-8236-28504D7EF392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F6BDF0A-F6E5-4515-8236-28504D7EF392}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F6BDF0A-F6E5-4515-8236-28504D7EF392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2D2DAA-B6CA-4CF7-9734-AF2729562C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2D2DAA-B6CA-4CF7-9734-AF2729562C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2D2DAA-B6CA-4CF7-9734-AF2729562C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2D2DAA-B6CA-4CF7-9734-AF2729562C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E1463F-DA90-407E-B78E-72C7FBFF6E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E1463F-DA90-407E-B78E-72C7FBFF6E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E1463F-DA90-407E-B78E-72C7FBFF6E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E1463F-DA90-407E-B78E-72C7FBFF6E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D7D10E0-28E4-4991-8BF8-04B6EBA5B9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D7D10E0-28E4-4991-8BF8-04B6EBA5B9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D7D10E0-28E4-4991-8BF8-04B6EBA5B9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D7D10E0-28E4-4991-8BF8-04B6EBA5B9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0933CBD2-CD12-4CFA-A3BC-35EA0CAA99BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0933CBD2-CD12-4CFA-A3BC-35EA0CAA99BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0933CBD2-CD12-4CFA-A3BC-35EA0CAA99BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0933CBD2-CD12-4CFA-A3BC-35EA0CAA99BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1DA1584-E185-425F-B57A-1FE410F2DAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1DA1584-E185-425F-B57A-1FE410F2DAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1DA1584-E185-425F-B57A-1FE410F2DAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1DA1584-E185-425F-B57A-1FE410F2DAF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
