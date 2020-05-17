@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.MTG", "TTS.CardTool.MTG\TTS.CardTool.MTG.csproj", "{9B1299DE-9912-4837-B5A3-7C964D9D5CB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.L5R", "TTS.CardTool.L5R\TTS.CardTool.L5R.csproj", "{65A8A675-9423-4129-92DF-8CF0AF22DED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.UI", "TTS.CardTool.UI\TTS.CardTool.UI.csproj", "{D0018B1C-845D-41DE-9265-FC82E827ACAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Utils", "..\CS.Utils\CS.Utils\CS.Utils.csproj", "{AECA0F93-7B9A-4A38-B554-A3C2DDC7C2DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF.Utils", "..\CS.Utils\WPF.Utils\WPF.Utils.csproj", "{9B716678-C9F7-484B-8007-BA29467041B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B1299DE-9912-4837-B5A3-7C964D9D5CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1299DE-9912-4837-B5A3-7C964D9D5CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1299DE-9912-4837-B5A3-7C964D9D5CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1299DE-9912-4837-B5A3-7C964D9D5CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A8A675-9423-4129-92DF-8CF0AF22DED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A8A675-9423-4129-92DF-8CF0AF22DED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A8A675-9423-4129-92DF-8CF0AF22DED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A8A675-9423-4129-92DF-8CF0AF22DED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0018B1C-845D-41DE-9265-FC82E827ACAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0018B1C-845D-41DE-9265-FC82E827ACAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0018B1C-845D-41DE-9265-FC82E827ACAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0018B1C-845D-41DE-9265-FC82E827ACAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECA0F93-7B9A-4A38-B554-A3C2DDC7C2DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECA0F93-7B9A-4A38-B554-A3C2DDC7C2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECA0F93-7B9A-4A38-B554-A3C2DDC7C2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECA0F93-7B9A-4A38-B554-A3C2DDC7C2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B716678-C9F7-484B-8007-BA29467041B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B716678-C9F7-484B-8007-BA29467041B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B716678-C9F7-484B-8007-BA29467041B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B716678-C9F7-484B-8007-BA29467041B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D255CA36-6E7F-48F6-B67C-86C3D3B410DC}
+	EndGlobalSection
+EndGlobal
