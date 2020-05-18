@@ -1,17 +1,15 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 
-namespace TTS.CardTool.Process
+namespace TTS.CardTool.Data.MTG
 {
-    [ModuleDependency("TTS.CardPool.Parser.Module")]
-    [ModuleDependency("TTS.CardTool.Data.Module")]
     public class Module : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider) { }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<ICreationProcess, CreationProcess>();
+            containerRegistry.RegisterSingleton<IDataDownloader, DataDownloader>();
         }
     }
 }

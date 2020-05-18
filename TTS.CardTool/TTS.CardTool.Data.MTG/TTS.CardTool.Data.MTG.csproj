@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Prism.Core" Version="7.2.0.1422" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TTS.CardTool.Data\TTS.CardTool.Data.csproj" />
-    <ProjectReference Include="..\TTS.CardTool.Parser\TTS.CardTool.Parser.csproj" />
+    <ProjectReference Include="..\TTS.CardTool.Model.MTG\TTS.CardTool.Model.MTG.csproj" />
+    <ProjectReference Include="..\TTS.CardTool.Model\TTS.CardTool.Model.csproj" />
   </ItemGroup>
 
 </Project>

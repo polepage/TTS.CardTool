@@ -4,6 +4,7 @@ using Prism.Mvvm;
 using Prism.Services.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Windows.Input;
 using TTS.CardTool.Process;
@@ -59,27 +60,53 @@ namespace TTS.CardTool.UI.ViewModel
 
         private async void CreateImage()
         {
-            IProgress<(bool, string, int)> progress = new Progress<(bool indetermintate, string text, int maximum)>(s =>
+            void showErrorMessage(string title, string content)
             {
-                if (s.indetermintate)
+                IDialogParameters dialogParameters = new DialogParameters
                 {
-                    _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate(s.text));
-                }
-                else
-                {
-                    _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Range(s.text, s.maximum));
-                }
-            });
+                    { DialogParams.Title, title },
+                    { DialogParams.Alert.Content, content },
+                    { DialogParams.Alert.Image, DialogParams.Alert.AlertImage.Error }
+                };
 
-            IProgress<int> stepProgress = new Progress<int>(p =>
+                _dialogService.ShowMessageBox(dialogParameters, null);
+            };
+
+            try
             {
-                _eventAggregator.GetEvent<UpdateWaiterValue>().Publish(p);
-            });
+                IProgress<(bool, string, int)> progress = new Progress<(bool indetermintate, string text, int maximum)>(s =>
+                {
+                    if (s.indetermintate)
+                    {
+                        _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate(s.text));
+                    }
+                    else
+                    {
+                        _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Range(s.text, s.maximum));
+                    }
+                });
 
-            _eventAggregator.GetEvent<ShowWaiter>().Publish();
-            _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate());
-            await _process.Create(Text, progress, stepProgress);
-            _eventAggregator.GetEvent<HideWaiter>().Publish();
+                IProgress<int> stepProgress = new Progress<int>(p =>
+                {
+                    _eventAggregator.GetEvent<UpdateWaiterValue>().Publish(p);
+                });
+
+                _eventAggregator.GetEvent<ShowWaiter>().Publish();
+                _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate());
+                await _process.Create(Text, progress, stepProgress);
+            }
+            catch (HttpRequestException e)
+            {
+                showErrorMessage("Server Error", e.Message);
+            }
+            catch (KeyNotFoundException e)
+            {
+                showErrorMessage("Card Error", e.Message);
+            }
+            finally
+            {
+                _eventAggregator.GetEvent<HideWaiter>().Publish();
+            }
         }
     }
 }
