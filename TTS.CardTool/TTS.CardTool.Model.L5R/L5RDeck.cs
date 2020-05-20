@@ -10,21 +10,18 @@ namespace TTS.CardTool.Model.L5R
             Base = new List<Card>();
             Conflict = new List<Card>();
             Dynasty = new List<Card>();
-            Provinces = new List<Card>();
-            Identity = new List<Card>();
+            Others = new List<Card>();
         }
 
         public IList<Card> Base { get; }
         public IList<Card> Conflict { get; }
         public IList<Card> Dynasty { get; }
-        public IList<Card> Provinces { get; }
-        public IList<Card> Identity { get; } // Stronghold + Role
+        public IList<Card> Others { get; } // Provinces + Stronghold + Role
 
-        public override int TotalCount => Base.Count > 0 ? Base.Count : Conflict.Count + Dynasty.Count + Provinces.Count + Identity.Count;
+        public override int TotalCount => Base.Count > 0 ? Base.Count : Conflict.Count + Dynasty.Count + Others.Count;
 
         public override IEnumerable<Card> AllCards => Base.Count > 0 ? Base : Conflict
                                                                                 .Concat(Dynasty)
-                                                                                .Concat(Provinces)
-                                                                                .Concat(Identity);
+                                                                                .Concat(Others);
     }
 }
