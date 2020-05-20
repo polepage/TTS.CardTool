@@ -32,6 +32,7 @@ namespace TTS.CardTool.MTG
             base.ConfigureModuleCatalog(moduleCatalog);
 
             moduleCatalog
+                .AddModule<Downloader.Module>("TTS.CardTool.Downloader.Module")
                 .AddModule<Data.MTG.Module>("TTS.CardTool.Data.Module")
                 .AddModule<Parser.MTG.Module>("TTS.CardTool.Parser.Module")
                 .AddModule<Process.Module>("TTS.CardTool.Process.Module")
