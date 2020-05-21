@@ -4,8 +4,8 @@ using Prism.Mvvm;
 using Prism.Services.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
-using System.Text;
 using System.Windows.Input;
 using TTS.CardTool.Process;
 using TTS.CardTool.UI.Events;
@@ -52,13 +52,13 @@ namespace TTS.CardTool.UI.ViewModel
                 if (dialogResult.Result == ButtonResult.OK)
                 {
                     string filePath = dialogResult.Parameters.GetValue<string>(DialogParams.File.Target);
-                    using var stream = System.IO.File.OpenText(filePath);
+                    using var stream = File.OpenText(filePath);
                     Text = stream.ReadToEnd();
                 }
             });
         }
 
-        private async void CreateImage()
+        private void CreateImage()
         {
             void showErrorMessage(string title, string content)
             {
@@ -72,41 +72,59 @@ namespace TTS.CardTool.UI.ViewModel
                 _dialogService.ShowMessageBox(dialogParameters, null);
             };
 
-            try
+            IDialogParameters dialogParameters = new DialogParameters
             {
-                IProgress<(bool, string, int)> progress = new Progress<(bool indetermintate, string text, int maximum)>(s =>
-                {
-                    if (s.indetermintate)
-                    {
-                        _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate(s.text));
-                    }
-                    else
-                    {
-                        _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Range(s.text, s.maximum));
-                    }
-                });
+                { DialogParams.Title, "Select Output Target" },
+                { DialogParams.File.Filter, "TTS Card File (*.tts)|*.tts" }
+            };
 
-                IProgress<int> stepProgress = new Progress<int>(p =>
+            _dialogService.ShowSaveDialog(dialogParameters, async dialogResult =>
+            {
+                if (dialogResult.Result != ButtonResult.OK)
                 {
-                    _eventAggregator.GetEvent<UpdateWaiterValue>().Publish(p);
-                });
+                    return;
+                }
 
-                _eventAggregator.GetEvent<ShowWaiter>().Publish();
-                _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate());
-                await _process.Create(Text, progress, stepProgress);
-            }
-            catch (HttpRequestException e)
-            {
-                showErrorMessage("Server Error", e.Message);
-            }
-            catch (KeyNotFoundException e)
-            {
-                showErrorMessage("Card Error", e.Message);
-            }
-            finally
-            {
-                _eventAggregator.GetEvent<HideWaiter>().Publish();
-            }
+                try
+                {
+                    IProgress<(bool, string, int)> progress = new Progress<(bool indetermintate, string text, int maximum)>(s =>
+                    {
+                        if (s.indetermintate)
+                        {
+                            _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate(s.text));
+                        }
+                        else
+                        {
+                            _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Range(s.text, s.maximum));
+                        }
+                    });
+
+                    IProgress<int> stepProgress = new Progress<int>(p =>
+                    {
+                        _eventAggregator.GetEvent<UpdateWaiterValue>().Publish(p);
+                    });
+
+                    string filePath = dialogResult.Parameters.GetValue<string>(DialogParams.File.Target);
+                    string directory = Path.GetDirectoryName(filePath) + @"\";
+                    string fileName = Path.GetFileNameWithoutExtension(filePath);
+
+                    _eventAggregator.GetEvent<ShowWaiter>().Publish();
+                    _eventAggregator.GetEvent<UpdateWaiterStatus>().Publish(WaiterStatus.Indeterminate());
+                    await _process.Create(Text, directory, fileName, progress, stepProgress);
+                }
+                catch (HttpRequestException e)
+                {
+                    showErrorMessage("Server Error", e.Message);
+                }
+                catch (KeyNotFoundException e)
+                {
+                    showErrorMessage("Card Error", e.Message);
+                }
+                finally
+                {
+                    _eventAggregator.GetEvent<HideWaiter>().Publish();
+                }
+            });   
         }
     }
 }

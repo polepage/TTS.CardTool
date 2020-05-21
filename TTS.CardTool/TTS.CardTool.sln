@@ -33,7 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Data.MTG", "TT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Data.L5R", "TTS.CardTool.Data.L5R\TTS.CardTool.Data.L5R.csproj", "{D5F1B1B6-461F-4B04-8052-12D15091D00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Downloader", "TTS.CardTool.Downloader\TTS.CardTool.Downloader.csproj", "{0EA5E579-87D3-4187-AD0B-9B6927A32529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Downloader", "TTS.CardTool.Downloader\TTS.CardTool.Downloader.csproj", "{0EA5E579-87D3-4187-AD0B-9B6927A32529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Output", "TTS.CardTool.Output\TTS.CardTool.Output.csproj", "{AF06A3E0-E986-49D0-9AA6-B32F2BDDF3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Output.MTG", "TTS.CardTool.Output.MTG\TTS.CardTool.Output.MTG.csproj", "{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,14 @@ Global
 		{0EA5E579-87D3-4187-AD0B-9B6927A32529}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EA5E579-87D3-4187-AD0B-9B6927A32529}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EA5E579-87D3-4187-AD0B-9B6927A32529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF06A3E0-E986-49D0-9AA6-B32F2BDDF3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF06A3E0-E986-49D0-9AA6-B32F2BDDF3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF06A3E0-E986-49D0-9AA6-B32F2BDDF3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF06A3E0-E986-49D0-9AA6-B32F2BDDF3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

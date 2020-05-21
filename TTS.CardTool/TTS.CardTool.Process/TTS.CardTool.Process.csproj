@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TTS.CardTool.Data\TTS.CardTool.Data.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Downloader\TTS.CardTool.Downloader.csproj" />
+    <ProjectReference Include="..\TTS.CardTool.Output\TTS.CardTool.Output.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Parser\TTS.CardTool.Parser.csproj" />
   </ItemGroup>
 
