@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Data.L5R", "TT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Downloader", "TTS.CardTool.Downloader\TTS.CardTool.Downloader.csproj", "{0EA5E579-87D3-4187-AD0B-9B6927A32529}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Output", "TTS.CardTool.Output\TTS.CardTool.Output.csproj", "{AF06A3E0-E986-49D0-9AA6-B32F2BDDF3E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Output", "TTS.CardTool.Output\TTS.CardTool.Output.csproj", "{AF06A3E0-E986-49D0-9AA6-B32F2BDDF3E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Output.MTG", "TTS.CardTool.Output.MTG\TTS.CardTool.Output.MTG.csproj", "{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Output.MTG", "TTS.CardTool.Output.MTG\TTS.CardTool.Output.MTG.csproj", "{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Output.L5R", "TTS.CardTool.Output.L5R\TTS.CardTool.Output.L5R.csproj", "{F6B4F3E6-B163-4939-83E9-73586FA6F061}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAF9CAF8-919C-496C-A202-B2F8D1F79B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B4F3E6-B163-4939-83E9-73586FA6F061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B4F3E6-B163-4939-83E9-73586FA6F061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B4F3E6-B163-4939-83E9-73586FA6F061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B4F3E6-B163-4939-83E9-73586FA6F061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

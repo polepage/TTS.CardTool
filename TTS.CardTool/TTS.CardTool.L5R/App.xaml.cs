@@ -32,6 +32,7 @@ namespace TTS.CardTool.L5R
             base.ConfigureModuleCatalog(moduleCatalog);
 
             moduleCatalog
+                .AddModule<Output.L5R.Module>("TTS.CardTool.Output.Module")
                 .AddModule<Downloader.Module>("TTS.CardTool.Downloader.Module")
                 .AddModule<Data.L5R.Module>("TTS.CardTool.Data.Module")
                 .AddModule<Parser.L5R.Module>("TTS.CardTool.Parser.Module")
