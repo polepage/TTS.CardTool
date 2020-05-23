@@ -7,7 +7,10 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Height="600" Width="800">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="{x:Static nav:NavigationParams.DeckRegion}"/>
+        <DockPanel>
+            <ContentControl DockPanel.Dock="Top" prism:RegionManager.RegionName="{x:Static nav:NavigationParams.CloudRegion}"/>
+            <ContentControl prism:RegionManager.RegionName="{x:Static nav:NavigationParams.DeckRegion}"/>
+        </DockPanel>
         <v:Waiter/>
     </Grid>
 </Window>

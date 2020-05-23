@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TTS.CardTool.Cloud\TTS.CardTool.Cloud.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Data.MTG\TTS.CardTool.Data.MTG.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Output.MTG\TTS.CardTool.Output.MTG.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Parser.MTG\TTS.CardTool.Parser.MTG.csproj" />

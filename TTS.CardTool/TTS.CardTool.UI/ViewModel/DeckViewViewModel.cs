@@ -27,10 +27,10 @@ namespace TTS.CardTool.UI.ViewModel
         }
 
         private DelegateCommand _openListCommand;
-        public ICommand OpenListCommand => _openListCommand ?? (_openListCommand = new DelegateCommand(OpenList));
+        public ICommand OpenListCommand => _openListCommand ??= new DelegateCommand(OpenList);
 
         private DelegateCommand _createImageCommand;
-        public ICommand CreateImageCommand => _createImageCommand ?? (_createImageCommand = new DelegateCommand(CreateImage));
+        public ICommand CreateImageCommand => _createImageCommand ??= new DelegateCommand(CreateImage);
 
         private string _text;
         public string Text

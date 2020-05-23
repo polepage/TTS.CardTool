@@ -3,6 +3,7 @@ using Prism.Modularity;
 
 namespace TTS.CardTool.Output.MTG
 {
+    [ModuleDependency("TTS.CardTool.Cloud.Module")]
     public class Module : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider) { }

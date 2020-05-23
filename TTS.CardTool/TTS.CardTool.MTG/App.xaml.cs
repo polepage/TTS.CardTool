@@ -38,7 +38,8 @@ namespace TTS.CardTool.MTG
                 .AddModule<Parser.MTG.Module>("TTS.CardTool.Parser.Module", dependsOn: ModuleDependency.GetDependencies<Parser.MTG.Module>())
                 .AddModule<Data.MTG.Module>("TTS.CardTool.Data.Module", dependsOn: ModuleDependency.GetDependencies<Data.MTG.Module>())
                 .AddModule<Downloader.Module>("TTS.CardTool.Downloader.Module", dependsOn: ModuleDependency.GetDependencies<Downloader.Module>())
-                .AddModule<Output.MTG.Module>("TTS.CardTool.Output.Module", dependsOn:ModuleDependency.GetDependencies<Output.MTG.Module>());
+                .AddModule<Output.MTG.Module>("TTS.CardTool.Output.Module", dependsOn:ModuleDependency.GetDependencies<Output.MTG.Module>())
+                .AddModule<Cloud.Module>("TTS.CardTool.Cloud.Module", dependsOn:ModuleDependency.GetDependencies<Cloud.Module>());
         }
     }
 }

@@ -1,0 +1,24 @@
+﻿<StackPanel x:Class="TTS.CardTool.UI.View.CloudConnection"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:prism="http://prismlibrary.com/"
+            xmlns:wc="clr-namespace:WPF.Utils.Converters;assembly=WPF.Utils"
+            prism:ViewModelLocator.AutoWireViewModel="True"
+            Orientation="Horizontal"
+            Margin="5 5 5 0">
+
+    <StackPanel.Resources>
+        <BooleanToVisibilityConverter x:Key="boolToVisibilityConverter"/>
+        <wc:ConverterQueue x:Key="invertedBoolToVisibilityConverter">
+            <wc:BoolInverterConverter/>
+            <BooleanToVisibilityConverter/>
+        </wc:ConverterQueue>
+    </StackPanel.Resources>
+
+    <Button Content="Log in" Width="80" Margin="0 0 5 0" Visibility="{Binding IsLoggedIn, Converter={StaticResource invertedBoolToVisibilityConverter}}"
+            Command="{Binding LogInCommand}"/>
+    <Button Content="Log out" Width="80" Margin="0 0 5 0" Visibility="{Binding IsLoggedIn, Converter={StaticResource boolToVisibilityConverter}}"
+            Command="{Binding LogOutCommand}"/>
+    <TextBlock Text="{Binding Status, StringFormat=Status: {0}}" VerticalAlignment="Center"/>
+
+</StackPanel>
