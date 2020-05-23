@@ -3,7 +3,7 @@ using Prism.Modularity;
 
 namespace TTS.CardTool.Process
 {
-    [ModuleDependency("TTS.CardPool.Parser.Module")]
+    [ModuleDependency("TTS.CardTool.Parser.Module")]
     [ModuleDependency("TTS.CardTool.Data.Module")]
     [ModuleDependency("TTS.CardTool.Downloader.Module")]
     [ModuleDependency("TTS.CardTool.Output.Module")]

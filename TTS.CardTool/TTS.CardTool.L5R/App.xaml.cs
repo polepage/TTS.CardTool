@@ -3,6 +3,7 @@ using Prism.Modularity;
 using Prism.Unity;
 using System.Windows;
 using TTS.CardTool.UI.View;
+using WPF.Utils.Modularity;
 
 namespace TTS.CardTool.L5R
 {
@@ -32,12 +33,12 @@ namespace TTS.CardTool.L5R
             base.ConfigureModuleCatalog(moduleCatalog);
 
             moduleCatalog
-                .AddModule<Output.L5R.Module>("TTS.CardTool.Output.Module")
-                .AddModule<Downloader.Module>("TTS.CardTool.Downloader.Module")
-                .AddModule<Data.L5R.Module>("TTS.CardTool.Data.Module")
-                .AddModule<Parser.L5R.Module>("TTS.CardTool.Parser.Module")
-                .AddModule<Process.Module>("TTS.CardTool.Process.Module")
-                .AddModule<UI.Module>("TTS.CardTool.UI.Module");
+                .AddModule<UI.Module>("TTS.CardTool.UI.Module", dependsOn: ModuleDependency.GetDependencies<UI.Module>())
+                .AddModule<Process.Module>("TTS.CardTool.Process.Module", dependsOn: ModuleDependency.GetDependencies<Process.Module>())
+                .AddModule<Parser.L5R.Module>("TTS.CardTool.Parser.Module", dependsOn: ModuleDependency.GetDependencies<Parser.L5R.Module>())
+                .AddModule<Data.L5R.Module>("TTS.CardTool.Data.Module", dependsOn: ModuleDependency.GetDependencies<Data.L5R.Module>())
+                .AddModule<Downloader.Module>("TTS.CardTool.Downloader.Module", dependsOn: ModuleDependency.GetDependencies<Downloader.Module>())
+                .AddModule<Output.L5R.Module>("TTS.CardTool.Output.Module", dependsOn: ModuleDependency.GetDependencies<Output.L5R.Module>());
         }
     }
 }

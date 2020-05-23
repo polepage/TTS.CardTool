@@ -3,6 +3,7 @@ using Prism.Modularity;
 using Prism.Unity;
 using System.Windows;
 using TTS.CardTool.UI.View;
+using WPF.Utils.Modularity;
 
 namespace TTS.CardTool.MTG
 {
@@ -32,12 +33,12 @@ namespace TTS.CardTool.MTG
             base.ConfigureModuleCatalog(moduleCatalog);
 
             moduleCatalog
-                .AddModule<Output.MTG.Module>("TTS.CardTool.Output.Module")
-                .AddModule<Downloader.Module>("TTS.CardTool.Downloader.Module")
-                .AddModule<Data.MTG.Module>("TTS.CardTool.Data.Module")
-                .AddModule<Parser.MTG.Module>("TTS.CardTool.Parser.Module")
-                .AddModule<Process.Module>("TTS.CardTool.Process.Module")
-                .AddModule<UI.Module>("TTS.CardTool.UI.Module");
+                .AddModule<UI.Module>("TTS.CardTool.UI.Module", dependsOn: ModuleDependency.GetDependencies<UI.Module>())
+                .AddModule<Process.Module>("TTS.CardTool.Process.Module", dependsOn: ModuleDependency.GetDependencies<Process.Module>())
+                .AddModule<Parser.MTG.Module>("TTS.CardTool.Parser.Module", dependsOn: ModuleDependency.GetDependencies<Parser.MTG.Module>())
+                .AddModule<Data.MTG.Module>("TTS.CardTool.Data.Module", dependsOn: ModuleDependency.GetDependencies<Data.MTG.Module>())
+                .AddModule<Downloader.Module>("TTS.CardTool.Downloader.Module", dependsOn: ModuleDependency.GetDependencies<Downloader.Module>())
+                .AddModule<Output.MTG.Module>("TTS.CardTool.Output.Module", dependsOn:ModuleDependency.GetDependencies<Output.MTG.Module>());
         }
     }
 }
