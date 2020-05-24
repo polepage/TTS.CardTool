@@ -3,6 +3,7 @@ using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Regions;
 using System;
+using TTS.CardTool.UI.Dialogs;
 using TTS.CardTool.UI.Navigation;
 using TTS.CardTool.UI.View;
 using TTS.CardTool.UI.ViewModel;
@@ -19,6 +20,7 @@ namespace TTS.CardTool.UI
             ViewModelLocationProvider.Register<DeckView>(() => resolver(typeof(DeckViewViewModel)));
             ViewModelLocationProvider.Register<Waiter>(() => resolver(typeof(WaiterViewModel)));
             ViewModelLocationProvider.Register<CloudConnection>(() => resolver(typeof(CloudConnectionViewModel)));
+            ViewModelLocationProvider.Register<ConnectionDialog>(() => resolver(typeof(ConnectionDialogViewModel)));
         }
 
         public void OnInitialized(IContainerProvider containerProvider)
@@ -28,6 +30,9 @@ namespace TTS.CardTool.UI
             regionManager.RegisterViewWithRegion(NavigationParams.CloudRegion, typeof(CloudConnection));
         }
 
-        public void RegisterTypes(IContainerRegistry containerRegistry) { }
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterDialog<ConnectionDialog, ConnectionDialogViewModel>(DialogParams.LogIn.Name);
+        }
     }
 }
