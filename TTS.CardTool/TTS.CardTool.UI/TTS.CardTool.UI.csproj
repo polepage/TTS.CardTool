@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\CS.Utils\CS.Utils\CS.Utils.csproj" />
     <ProjectReference Include="..\..\CS.Utils\WPF.Utils\WPF.Utils.csproj" />
+    <ProjectReference Include="..\TTS.CardTool.Cloud\TTS.CardTool.Cloud.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Process\TTS.CardTool.Process.csproj" />
   </ItemGroup>
 

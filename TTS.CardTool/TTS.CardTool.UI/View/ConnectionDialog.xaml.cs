@@ -1,5 +1,4 @@
-﻿using System.Security;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using TTS.CardTool.UI.Password;
 
 namespace TTS.CardTool.UI.View
@@ -20,9 +19,9 @@ namespace TTS.CardTool.UI.View
             Unloaded += DialogUnloaded;
         }
 
-        private SecureString GetPassword()
+        private string GetPassword()
         {
-            SecureString password = passwordBox.SecurePassword.Copy();
+            string password = passwordBox.Password;
             passwordBox.Clear();
             return password;
         }

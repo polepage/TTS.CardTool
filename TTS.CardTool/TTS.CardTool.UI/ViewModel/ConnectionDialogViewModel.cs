@@ -1,7 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Services.Dialogs;
 using System;
-using System.Security;
 using System.Windows.Input;
 using TTS.CardTool.UI.Password;
 using WPF.Utils.Dialogs;
@@ -11,7 +10,7 @@ namespace TTS.CardTool.UI.ViewModel
 {
     class ConnectionDialogViewModel: BaseDialogViewModel, IPasswordDialog
     {
-        private Func<SecureString> _getPassword;
+        private Func<string> _getPassword;
 
         private DelegateCommand _acceptCommand;
         public ICommand AcceptCommand => _acceptCommand ??= new DelegateCommand(Accept);
@@ -38,7 +37,7 @@ namespace TTS.CardTool.UI.ViewModel
             RaiseRequestClose(result);
         }
 
-        public void SetPasswordAccessor(Func<SecureString> getPassword)
+        public void SetPasswordAccessor(Func<string> getPassword)
         {
             _getPassword = getPassword;
         }
