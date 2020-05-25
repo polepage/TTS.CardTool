@@ -64,16 +64,14 @@ namespace TTS.CardTool.UI.ViewModel
             _cloudLogin.LogOut();   
         }
 
-        private void CloudLoggedIn()
+        private void CloudLoggedIn(string username)
         {
-            // Temp
             IsLoggedIn = true;
-            Status = "Online as Bob";
+            Status = $"Online as {username}";
         }
 
         private void CloudLoggedOut()
         {
-            // Temp
             IsLoggedIn = false;
             Status = "Offline";
         }

@@ -11,6 +11,8 @@ namespace TTS.CardTool.Cloud
 
         private readonly SteamUser _user;
 
+        private SteamUser.LogOnDetails _logInDetails;
+
         private bool _isRunning;
 
         public CloudLink()
@@ -26,19 +28,16 @@ namespace TTS.CardTool.Cloud
             _callbackManager.Subscribe<SteamUser.LoggedOffCallback>(OnLoggedOff);
         }
 
-        public event Action LoggedIn;
+        public event Action<string> LoggedIn;
         public event Action LoggedOut;
 
         public void LogIn(string username, string password)
         {
-            _callbackManager.Subscribe<SteamClient.ConnectedCallback>(cb =>
+            _logInDetails = new SteamUser.LogOnDetails
             {
-                _user.LogOn(new SteamUser.LogOnDetails
-                {
-                    Username = username,
-                    Password = password
-                });
-            });
+                Username = username,
+                Password = password
+            };
 
             _isRunning = true;
             _client.Connect();
@@ -58,9 +57,14 @@ namespace TTS.CardTool.Cloud
             }
         }
 
-        private void OnDisconnected(SteamClient.DisconnectedCallback callback)
+        private void OnConnected(SteamClient.ConnectedCallback _)
         {
-            // That will happen after logout anyway.
+            _user.LogOn(_logInDetails);
+        }
+
+        private void OnDisconnected(SteamClient.DisconnectedCallback _)
+        {
+            ClearLogInDetails();
             LoggedOut?.Invoke();
         }
 
@@ -68,15 +72,26 @@ namespace TTS.CardTool.Cloud
         {
             if (callback.Result == EResult.OK)
             {
-                
+                LoggedIn?.Invoke(_logInDetails.Username);
+                ClearLogInDetails();
             }
 
+            // Validate SteamGuard and shit
         }
 
         private void OnLoggedOff(SteamUser.LoggedOffCallback _)
         {
             // Dont really care if it worked or not.
             // It will eventually disconnect anyway.
+        }
+
+        private void ClearLogInDetails()
+        {
+            if (_logInDetails != null)
+            {
+                _logInDetails.Password = null;
+                _logInDetails = null;
+            }
         }
     }
 }
