@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.MTG", "TTS.CardTool.MTG\TTS.CardTool.MTG.csproj", "{B5849129-5FEC-4BAB-88BE-27D6A8AE34BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.L5R", "TTS.CardTool.L5R\TTS.CardTool.L5R.csproj", "{9CCC4AD0-D6D8-4800-9A27-79801F2ED74E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5849129-5FEC-4BAB-88BE-27D6A8AE34BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5849129-5FEC-4BAB-88BE-27D6A8AE34BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5849129-5FEC-4BAB-88BE-27D6A8AE34BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5849129-5FEC-4BAB-88BE-27D6A8AE34BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CCC4AD0-D6D8-4800-9A27-79801F2ED74E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCC4AD0-D6D8-4800-9A27-79801F2ED74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCC4AD0-D6D8-4800-9A27-79801F2ED74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCC4AD0-D6D8-4800-9A27-79801F2ED74E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D613CFD-49A4-4875-9F6D-2EE81D31B4B7}
+	EndGlobalSection
+EndGlobal

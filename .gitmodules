@@ -1,0 +1,3 @@
+[submodule "CS.Utils"]
+	path = CS.Utils
+	url = https://github.com/polepage/CS.Utils.git
