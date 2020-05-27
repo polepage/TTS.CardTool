@@ -29,7 +29,8 @@ namespace TTS.CardTool.L5R
             base.ConfigureModuleCatalog(moduleCatalog);
 
             moduleCatalog
-                .AddModule<UI.Module>("TTS.CardTool.UI.Module", dependsOn: ModuleDependency.GetDependencies<UI.Module>());
+                .AddModule<UI.Module>("TTS.CardTool.UI.Module", dependsOn: ModuleDependency.GetDependencies<UI.Module>())
+                .AddModule<Converter.Module>("TTS.CardTool.Converter.Module", dependsOn: ModuleDependency.GetDependencies<Converter.Module>());
         }
     }
 }

@@ -10,6 +10,7 @@ using TTS.CardTool.UI.ViewModel;
 
 namespace TTS.CardTool.UI
 {
+    [ModuleDependency("TTS.CardTool.Converter.Module")]
     public class Module : IModule
     {
         public static void ConfigureViewModelLocator(Func<Type, object> resolver)

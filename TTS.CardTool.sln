@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.MTG", "TTS.CardTool.MTG\TTS.CardTool.MTG.csproj", "{B5849129-5FEC-4BAB-88BE-27D6A8AE34BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.MTG", "TTS.CardTool.MTG\TTS.CardTool.MTG.csproj", "{B5849129-5FEC-4BAB-88BE-27D6A8AE34BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.L5R", "TTS.CardTool.L5R\TTS.CardTool.L5R.csproj", "{9CCC4AD0-D6D8-4800-9A27-79801F2ED74E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.L5R", "TTS.CardTool.L5R\TTS.CardTool.L5R.csproj", "{9CCC4AD0-D6D8-4800-9A27-79801F2ED74E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.UI", "TTS.CardTool.UI\TTS.CardTool.UI.csproj", "{FC703E31-2B2F-44E7-936E-D935DCECFF55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.UI", "TTS.CardTool.UI\TTS.CardTool.UI.csproj", "{FC703E31-2B2F-44E7-936E-D935DCECFF55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Utils", "CS.Utils\CS.Utils\CS.Utils.csproj", "{87DAC03A-7DB3-466D-B1B8-7560CB02B70F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF.Utils", "CS.Utils\WPF.Utils\WPF.Utils.csproj", "{28A70B2F-A754-43FC-BBA8-E4DEF3BCCD5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor", "TTS.CardTool.Processor\TTS.CardTool.Processor.csproj", "{67ABC834-3C67-481D-86A0-04750DCBBB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Converter", "TTS.CardTool.Converter\TTS.CardTool.Converter.csproj", "{CEC32B25-E197-4C92-B073-D4A629436710}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{28A70B2F-A754-43FC-BBA8-E4DEF3BCCD5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28A70B2F-A754-43FC-BBA8-E4DEF3BCCD5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28A70B2F-A754-43FC-BBA8-E4DEF3BCCD5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67ABC834-3C67-481D-86A0-04750DCBBB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67ABC834-3C67-481D-86A0-04750DCBBB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67ABC834-3C67-481D-86A0-04750DCBBB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67ABC834-3C67-481D-86A0-04750DCBBB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC32B25-E197-4C92-B073-D4A629436710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC32B25-E197-4C92-B073-D4A629436710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC32B25-E197-4C92-B073-D4A629436710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC32B25-E197-4C92-B073-D4A629436710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

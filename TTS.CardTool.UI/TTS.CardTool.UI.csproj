@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CS.Utils\CS.Utils\CS.Utils.csproj" />
     <ProjectReference Include="..\CS.Utils\WPF.Utils\WPF.Utils.csproj" />
+    <ProjectReference Include="..\TTS.CardTool.Converter\TTS.CardTool.Converter.csproj" />
   </ItemGroup>
 
   <ItemGroup>

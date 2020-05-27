@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TTS.CardTool.Converter\TTS.CardTool.Converter.csproj" />
     <ProjectReference Include="..\TTS.CardTool.UI\TTS.CardTool.UI.csproj" />
   </ItemGroup>
 

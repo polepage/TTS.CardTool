@@ -1,19 +1,25 @@
 ﻿using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
 using System.Windows;
 using System.Windows.Input;
+using TTS.CardTool.UI.Events;
 using WPF.Utils.Dialogs;
 
 namespace TTS.CardTool.UI.ViewModel
 {
     class InputsViewModel: BindableBase
     {
+        private readonly IEventAggregator _eventAggregator;
         private readonly IDialogService _dialogService;
 
-        public InputsViewModel(IDialogService dialogService)
+        public InputsViewModel(IEventAggregator eventAggregator, IDialogService dialogService)
         {
+            _eventAggregator = eventAggregator;
             _dialogService = dialogService;
+
+            _eventAggregator.GetEvent<RequestInput>().Subscribe(InputRequested);
         }
 
         private DelegateCommand _loadCommand;
@@ -51,6 +57,11 @@ namespace TTS.CardTool.UI.ViewModel
         private void Paste()
         {
             DeckContent = Clipboard.GetText();
+        }
+
+        private void InputRequested()
+        {
+            _eventAggregator.GetEvent<PostInput>().Publish(DeckContent);
         }
     }
 }
