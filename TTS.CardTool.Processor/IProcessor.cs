@@ -1,7 +1,9 @@
-﻿namespace TTS.CardTool.Processor
+﻿using System.Threading.Tasks;
+
+namespace TTS.CardTool.Processor
 {
     public interface IProcessor
     {
-        Deck CreateDeck(string decklist);
+        Task<Deck> CreateDeck(string decklist);
     }
 }

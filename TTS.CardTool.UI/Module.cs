@@ -19,7 +19,7 @@ namespace TTS.CardTool.UI
             ViewModelLocationProvider.Register<Inputs>(() => resolver(typeof(InputsViewModel)));
             ViewModelLocationProvider.Register<Outputs>(() => resolver(typeof(OutputsViewModel)));
             ViewModelLocationProvider.Register<Actions>(() => resolver(typeof(ActionsViewModel)));
-            //ViewModelLocationProvider.Register<Waiter>(() => resolver(typeof(WaiterViewModel)));
+            ViewModelLocationProvider.Register<Waiter>(() => resolver(typeof(WaiterViewModel)));
         }
 
         public static Window CreateMainWindow(string title)

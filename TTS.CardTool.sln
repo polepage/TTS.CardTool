@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Converter", "TTS.CardTool.Converter\TTS.CardTool.Converter.csproj", "{CEC32B25-E197-4C92-B073-D4A629436710}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor.MTG", "TTS.CardTool.Processor.MTG\TTS.CardTool.Processor.MTG.csproj", "{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{CEC32B25-E197-4C92-B073-D4A629436710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC32B25-E197-4C92-B073-D4A629436710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC32B25-E197-4C92-B073-D4A629436710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

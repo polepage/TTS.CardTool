@@ -6,9 +6,9 @@ namespace TTS.CardTool.Processor
     {
         public Deck(IEnumerable<Pile> piles)
         {
-            CardPiles = new List<Pile>(piles);
+            Piles = new List<Pile>(piles);
         }
 
-        public IEnumerable<Pile> CardPiles { get; }
+        public IEnumerable<Pile> Piles { get; }
     }
 }

@@ -1,16 +1,15 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 
-namespace TTS.CardTool.Converter
+namespace TTS.CardTool.Processor
 {
-    [ModuleDependency("TTS.CardTool.Processor.Module")]
     public class Module : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider) { }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IDeckConverter, DeckConverter>();
+            containerRegistry.RegisterSingleton<IProcessor, DeckProcessor>();
         }
     }
 }

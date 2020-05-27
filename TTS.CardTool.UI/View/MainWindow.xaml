@@ -1,6 +1,7 @@
 ﻿<Window x:Class="TTS.CardTool.UI.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:v="clr-namespace:TTS.CardTool.UI.View"
         xmlns:nav="clr-namespace:TTS.CardTool.UI.Navigation"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
@@ -16,5 +17,7 @@
         <ContentControl Grid.Column="2" prism:RegionManager.RegionName="{x:Static nav:NavigationParams.OutputRegion}"/>
 
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="{x:Static nav:NavigationParams.ActionRegion}"/>
+
+        <v:Waiter Grid.ColumnSpan="3"/>
     </Grid>
 </Window>

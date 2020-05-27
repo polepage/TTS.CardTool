@@ -1,7 +1,9 @@
-﻿namespace TTS.CardTool.Converter
+﻿using System.Threading.Tasks;
+
+namespace TTS.CardTool.Converter
 {
     public interface IDeckConverter
     {
-        string Convert(string decklist);
+        Task<string> Convert(string decklist);
     }
 }
