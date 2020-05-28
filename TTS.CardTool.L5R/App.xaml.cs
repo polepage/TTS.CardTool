@@ -1,4 +1,5 @@
-﻿using Prism.Ioc;
+﻿using CS.Utils.Modularity;
+using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Unity;
 using System.Windows;
@@ -30,7 +31,8 @@ namespace TTS.CardTool.L5R
 
             moduleCatalog
                 .AddModule<UI.Module>("TTS.CardTool.UI.Module", dependsOn: ModuleDependency.GetDependencies<UI.Module>())
-                .AddModule<Converter.Module>("TTS.CardTool.Converter.Module", dependsOn: ModuleDependency.GetDependencies<Converter.Module>());
+                .AddModule<Converter.Module>("TTS.CardTool.Converter.Module", dependsOn: ModuleDependency.GetDependencies<Converter.Module>())
+                .AddModule<Processor.Module>("TTS.CardTool.Processor.Module", dependsOn: ModuleDependency.GetDependencies<Processor.Module>());
         }
     }
 }

@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Utils", "CS.Utils\CS.Uti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF.Utils", "CS.Utils\WPF.Utils\WPF.Utils.csproj", "{28A70B2F-A754-43FC-BBA8-E4DEF3BCCD5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor", "TTS.CardTool.Processor\TTS.CardTool.Processor.csproj", "{67ABC834-3C67-481D-86A0-04750DCBBB18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Processor", "TTS.CardTool.Processor\TTS.CardTool.Processor.csproj", "{67ABC834-3C67-481D-86A0-04750DCBBB18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Converter", "TTS.CardTool.Converter\TTS.CardTool.Converter.csproj", "{CEC32B25-E197-4C92-B073-D4A629436710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Converter", "TTS.CardTool.Converter\TTS.CardTool.Converter.csproj", "{CEC32B25-E197-4C92-B073-D4A629436710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor.MTG", "TTS.CardTool.Processor.MTG\TTS.CardTool.Processor.MTG.csproj", "{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Processor.MTG", "TTS.CardTool.Processor.MTG\TTS.CardTool.Processor.MTG.csproj", "{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor.L5R", "TTS.CardTool.Processor.L5R\TTS.CardTool.Processor.L5R.csproj", "{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC8C301F-C0E8-45B5-881E-1E4B7B840CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
