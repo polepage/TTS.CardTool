@@ -1,0 +1,20 @@
+{
+  "backs": {
+    "conflict": {
+      "name": "Conflict Deck Back",
+      "path": "CONFLICT BACK PATH"
+    },
+    "dynasty": {
+      "name": "Dynasty Deck Back",
+      "path": "DYNASTY BACK PATH"
+    },
+    "identity": {
+      "name": "Other Cards Back",
+      "path": "IDENTITY BACK PATH"
+    }
+  },
+  "sets": {
+    "Clan Wars": "Clan War",
+    "Core": "Core Set"
+  }
+}

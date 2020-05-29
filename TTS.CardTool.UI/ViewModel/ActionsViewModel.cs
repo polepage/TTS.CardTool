@@ -8,6 +8,7 @@ using System.Windows.Input;
 using TTS.CardTool.Converter;
 using TTS.CardTool.UI.Events;
 using WPF.Utils.Dialogs;
+using UIDialogParams = TTS.CardTool.UI.Dialogs.DialogParams;
 
 namespace TTS.CardTool.UI.ViewModel
 {
@@ -29,9 +30,22 @@ namespace TTS.CardTool.UI.ViewModel
         private DelegateCommand _convertCommand;
         public ICommand ConvertCommand => _convertCommand ??= new DelegateCommand(Convert);
 
+        private DelegateCommand _settingsCommand;
+        public ICommand SettingsCommand => _settingsCommand ??= new DelegateCommand(Settings);
+
         public void Convert()
         {
             _eventAggregator.GetEvent<RequestInput>().Publish();
+        }
+
+        private void Settings()
+        {
+            IDialogParameters dialogParameters = new DialogParameters
+            {
+                { DialogParams.Title, "Options" }
+            };
+
+            _dialogService.ShowDialog(UIDialogParams.Options.Name, dialogParameters, null);
         }
 
         private async void InputReceived(string input)

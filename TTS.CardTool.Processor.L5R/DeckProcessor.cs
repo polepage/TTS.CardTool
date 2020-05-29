@@ -8,21 +8,24 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using TTS.CardTool.Processor.Json;
+using TTS.CardTool.Processor.Options;
 using TTS.CardTool.Processor.Parser;
 
 namespace TTS.CardTool.Processor
 {
     class DeckProcessor : IProcessor
     {
-        private static readonly string _cacheFile = "cache";
-        private static readonly string _setNameFixerFile = "setnamefixes";
+        private static readonly string _cacheFile = "cache.json";
+
+        private readonly IProcessorOptions _options;
 
         private readonly HttpClient _client;
         private Cache _cache;
-        private SetNameFixer _setNameFixer;
 
-        public DeckProcessor()
+        public DeckProcessor(IProcessorOptions options)
         {
+            _options = options;
+
             _client = new HttpClient
             {
                 BaseAddress = new Uri(@"https://api.fiveringsdb.com")
@@ -31,19 +34,19 @@ namespace TTS.CardTool.Processor
 
         public async Task<Deck> CreateDeck(string decklist)
         {
-            var parsedCards = await ParseList(decklist);
+            var parsedCards = ParseList(decklist);
             await ValidateCache(parsedCards);
-
+            
             var (conflict, dynasty, identity) = CreateCards(parsedCards);
             return new Deck(new List<Pile>
             {
-                new Pile("Conflict", "TODO", conflict),
-                new Pile("Dynasty", "TODO", dynasty),
-                new Pile("Identity", "TODO", identity)
+                new Pile("Conflict", _options.CardBacks["conflict"].Path, conflict),
+                new Pile("Dynasty", _options.CardBacks["dynasty"].Path, dynasty),
+                new Pile("Identity", _options.CardBacks["identity"].Path, identity)
             });
         }
 
-        private async Task<List<ParsedCard>> ParseList(string decklist)
+        private List<ParsedCard> ParseList(string decklist)
         {
             var deck = new List<ParsedCard>();
 
@@ -87,31 +90,18 @@ namespace TTS.CardTool.Processor
                 });
             }
 
-            await FixSetNames(deck);
+            FixSetNames(deck);
             return deck;
         }
 
-        private async Task FixSetNames(IEnumerable<ParsedCard> cards)
+        private void FixSetNames(IEnumerable<ParsedCard> cards)
         {
             // This method is used to fix some incoherent set names between jigoku, bushi builder and five rings DB
             // It even fixes a set name discrepency between five rings DB database and five ring DB deckbuilder exporter.
-            await LoadSetNameFixer();
-            foreach (ParsedCard card in cards.Where(c => _setNameFixer.Fixes.ContainsKey(c.Set)))
+            foreach (ParsedCard card in cards.Where(c => _options.SetMap.ContainsKey(c.Set)))
             {
-                card.Set = _setNameFixer.Fixes[card.Set];
+                card.Set = _options.SetMap[card.Set];
             }
-        }
-
-        private async Task LoadSetNameFixer()
-        {
-            if (_setNameFixer != null)
-            {
-                return;
-            }
-
-            using var stream = File.OpenText(_setNameFixerFile);
-            string json = await stream.ReadToEndAsync();
-            _setNameFixer = JsonConvert.DeserializeObject<SetNameFixer>(json);
         }
 
         private async Task ValidateCache(IEnumerable<ParsedCard> cards)

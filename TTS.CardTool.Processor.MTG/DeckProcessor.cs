@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using TTS.CardTool.Processor.Json;
+using TTS.CardTool.Processor.Options;
 using TTS.CardTool.Processor.Parser;
 
 namespace TTS.CardTool.Processor
@@ -16,10 +17,14 @@ namespace TTS.CardTool.Processor
         private static readonly string Json = "application/json";
         private static readonly Encoding Encoding = Encoding.UTF8;
 
+        private readonly IProcessorOptions _options;
+
         private readonly HttpClient _client;
 
-        public DeckProcessor()
+        public DeckProcessor(IProcessorOptions options)
         {
+            _options = options;
+
             _client = new HttpClient
             {
                 BaseAddress = new Uri(@"https://api.scryfall.com")
@@ -34,8 +39,8 @@ namespace TTS.CardTool.Processor
 
             return new Deck(new List<Pile>
             {
-                new Pile("Main", "TODO", CreateMainCardPile(cardsData.Zip(parsedCards, (sc, pc) => (sc, pc.Count)))),
-                new Pile("Tokens", "TODO", CreateTokenPile(cardsData
+                new Pile("Main", _options.CardBacks["magic"].Path, CreateMainCardPile(cardsData.Zip(parsedCards, (sc, pc) => (sc, pc.Count)))),
+                new Pile("Tokens", _options.CardBacks["magic"].Path, CreateTokenPile(cardsData
                                                             .Where(sc => sc.Layout == "transform")
                                                             .Concat(relatedCardsData)))
             });
@@ -98,7 +103,17 @@ namespace TTS.CardTool.Processor
                 });
             }
 
+            FixSetNames(deck);
             return deck;
+        }
+
+        private void FixSetNames(IEnumerable<ParsedCard> cards)
+        {
+            // This method is used to fix some incoherent set names between the different services
+            foreach (ParsedCard card in cards.Where(c => c.Set != null && _options.SetMap.ContainsKey(c.Set)))
+            {
+                card.Set = _options.SetMap[card.Set];
+            }
         }
 
         private async Task<List<ScryCard>> GetCardsData(IList<ParsedCard> parsedCards)

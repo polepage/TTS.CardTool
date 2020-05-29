@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTS.CardTool.Processor.MTG"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor.L5R", "TTS.CardTool.Processor.L5R\TTS.CardTool.Processor.L5R.csproj", "{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTS.CardTool.Processor.Options", "TTS.CardTool.Processor.Options\TTS.CardTool.Processor.Options.csproj", "{FE14381A-733A-4D7C-9F99-01786B4906BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C9ADA64-B34C-49A3-AE34-E62C7A4B5BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE14381A-733A-4D7C-9F99-01786B4906BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE14381A-733A-4D7C-9F99-01786B4906BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE14381A-733A-4D7C-9F99-01786B4906BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE14381A-733A-4D7C-9F99-01786B4906BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

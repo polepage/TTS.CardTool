@@ -6,4 +6,7 @@
 
     <Button Content="Convert" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center"
             Command="{Binding ConvertCommand}"/>
+
+    <Button Content="Options" Height="40" Width="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 20"
+            Command="{Binding SettingsCommand}"/>
 </Grid>

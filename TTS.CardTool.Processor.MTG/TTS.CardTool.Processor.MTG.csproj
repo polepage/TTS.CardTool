@@ -11,7 +11,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TTS.CardTool.Processor.Options\TTS.CardTool.Processor.Options.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Processor\TTS.CardTool.Processor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="processoroptions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

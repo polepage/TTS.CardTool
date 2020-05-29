@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TTS.CardTool.Converter\TTS.CardTool.Converter.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Processor.L5R\TTS.CardTool.Processor.L5R.csproj" />
+    <ProjectReference Include="..\TTS.CardTool.Processor.Options\TTS.CardTool.Processor.Options.csproj" />
     <ProjectReference Include="..\TTS.CardTool.UI\TTS.CardTool.UI.csproj" />
   </ItemGroup>
 

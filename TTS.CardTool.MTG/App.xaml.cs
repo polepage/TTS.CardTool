@@ -31,7 +31,8 @@ namespace TTS.CardTool.MTG
             moduleCatalog
                 .AddModule<UI.Module>("TTS.CardTool.UI.Module", dependsOn: ModuleDependency.GetDependencies<UI.Module>())
                 .AddModule<Converter.Module>("TTS.CardTool.Converter.Module", dependsOn: ModuleDependency.GetDependencies<Converter.Module>())
-                .AddModule<Processor.Module>("TTS.CardTool.Processor.Module", dependsOn: ModuleDependency.GetDependencies<Processor.Module>());
+                .AddModule<Processor.Module>("TTS.CardTool.Processor.Module", dependsOn: ModuleDependency.GetDependencies<Processor.Module>())
+                .AddModule<Processor.Options.Module>("TTS.CardTool.Processor.Options.Module", dependsOn: ModuleDependency.GetDependencies<Processor.Options.Module>());
         }
     }
 }
