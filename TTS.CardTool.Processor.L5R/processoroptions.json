@@ -2,15 +2,15 @@
   "backs": {
     "conflict": {
       "name": "Conflict Deck Back",
-      "path": "CONFLICT BACK PATH"
+      "path": "http://cloud-3.steamusercontent.com/ugc/1044218919659568226/64BA423331A18C63A23842E4E2BD8959A1A1553F/"
     },
     "dynasty": {
       "name": "Dynasty Deck Back",
-      "path": "DYNASTY BACK PATH"
+      "path": "http://cloud-3.steamusercontent.com/ugc/1044218919659569084/8C7EC415A763AE8170399FB156493AC0BD1555C1/"
     },
     "identity": {
       "name": "Other Cards Back",
-      "path": "IDENTITY BACK PATH"
+      "path": "http://cloud-3.steamusercontent.com/ugc/1044218919659570201/352BC3030376D74888E8750EF0D8893A626BF5F8/"
     }
   },
   "sets": {

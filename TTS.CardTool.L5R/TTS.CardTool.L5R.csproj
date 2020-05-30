@@ -4,6 +4,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <Authors>Pierre Olivier LePage</Authors>
+    <Description>Json generator for TTS L5R Table.</Description>
   </PropertyGroup>
 
   <ItemGroup>
