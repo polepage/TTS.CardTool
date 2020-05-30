@@ -6,6 +6,10 @@
     <UseWPF>true</UseWPF>
     <Authors>Pierre Olivier LePage</Authors>
     <Description>Json generator for TTS L5R Table.</Description>
+    <PackageProjectUrl>https://github.com/polepage/TTS.CardTool</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/polepage/TTS.CardTool</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +21,13 @@
     <ProjectReference Include="..\TTS.CardTool.Processor.L5R\TTS.CardTool.Processor.L5R.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Processor.Options\TTS.CardTool.Processor.Options.csproj" />
     <ProjectReference Include="..\TTS.CardTool.UI\TTS.CardTool.UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

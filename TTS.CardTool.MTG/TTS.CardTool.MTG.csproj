@@ -4,6 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <Description>Json generator for TTS MTG Table.</Description>
+    <Authors>Pierre Olivier LePage</Authors>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/polepage/TTS.CardTool</PackageProjectUrl>
+    <RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +19,13 @@
     <ProjectReference Include="..\TTS.CardTool.Processor.MTG\TTS.CardTool.Processor.MTG.csproj" />
     <ProjectReference Include="..\TTS.CardTool.Processor.Options\TTS.CardTool.Processor.Options.csproj" />
     <ProjectReference Include="..\TTS.CardTool.UI\TTS.CardTool.UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
