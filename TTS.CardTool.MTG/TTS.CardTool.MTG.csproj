@@ -10,9 +10,9 @@
     <PackageProjectUrl>https://github.com/polepage/TTS.CardTool</PackageProjectUrl>
     <RepositoryType>GitHub</RepositoryType>
     <RepositoryUrl>https://github.com/polepage/TTS.CardTool</RepositoryUrl>
-    <PackageIcon>mtg.jpg</PackageIcon>
+    <PackageIcon>icon.jpg</PackageIcon>
     <PackageIconUrl />
-    <ApplicationIcon>mtg.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
     <Win32Resource />
   </PropertyGroup>
 
@@ -27,15 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\mtg.jpg">
+    <None Include="icon.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
     <None Include="..\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="mtg.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

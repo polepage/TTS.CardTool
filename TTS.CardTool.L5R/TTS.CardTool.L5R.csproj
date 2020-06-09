@@ -10,8 +10,8 @@
     <RepositoryUrl>https://github.com/polepage/TTS.CardTool</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <ApplicationIcon>l5r.ico</ApplicationIcon>
-    <PackageIcon>l5r.png</PackageIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl />
   </PropertyGroup>
 
@@ -31,7 +31,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="l5r.png">
+    <None Include="icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

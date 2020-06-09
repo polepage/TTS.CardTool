@@ -1,0 +1,3 @@
+This application requires .NET Core Desktop runtime version 3.1 or above. At the end of the setup you will have to option to download and install the lated .NET Core Desktop runtime.
+
+This application is built to be installed along side Tabletop Simulator Card Tool for other card games. You can safely install all target games in the same folder.
